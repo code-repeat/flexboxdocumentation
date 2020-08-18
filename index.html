@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:768px)" href="css/mobile.css">
+    <link rel="stylesheet" media="screen and (min-width:769px)" href="css/widescreen.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
+    <title>Flexbox Documentation | The Complete Guide To CSS Flexbox</title>
+</head>
+<body>
+    <main class="container">
+        <div class="side-menu">
+            <h2>Flex Container</h2>
+            <ul>
+                <li><a href="#display">display</a></li>
+                <li><a href="#flex-direction">flex-direction</a></li>
+                <li><a href="#flex-wrap">flex-wrap</a></li>
+                <li><a href="#flex-flow">flex-flow</a></li>
+                <li><a href="#justify-content">justify-content</a></li>
+                <li><a href="#align-items">align-items</a></li>
+                <li><a href="#align-content">align-content</a></li>
+            </ul>
+            <h2>Flex Item</h2>
+            <ul>
+                <li><a href="#flex-grow">flex-grow</a></li>
+                <li><a href="#flex-basis">flex-basis</a></li>
+                <li><a href="#flex-shrink">flex-shrink</a></li>
+                <li><a href="#flex">flex</a></li>
+                <li><a href="#order">order</a></li>
+                <li><a href="#align-self">align-self</a></li>
+            </ul>
+        </div>
+
+        <!-- mobile menu -->
+        <aside>
+            <div class="menu-icon">
+                <i class="fas fa-bars fa-2x"></i>
+            </div>
+            <div id="menu-area">
+                <ul>
+                    <li><a href="#display">display</a></li>
+                    <li><a href="#flex-direction">flex-direction</a></li>
+                    <li><a href="#flex-wrap">flex-wrap</a></li>
+                    <li><a href="#flex-flow">flex-flow</a></li>
+                    <li><a href="#justify-content">justify-content</a></li>
+                    <li><a href="#align-items">align-items</a></li>
+                    <li><a href="#align-content">align-content</a></li>
+
+                    <li><a href="#flex-grow">flex-grow</a></li>
+                    <li><a href="#flex-basis">flex-basis</a></li>
+                    <li><a href="#flex-shrink">flex-shrink</a></li>
+                    <li><a href="#flex">flex</a></li>
+                    <li><a href="#order">order</a></li>
+                    <li><a href="#align-self">align-self</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="main-content">
+            <section id="introduction" class="content">
+                <h1>Flex Container</h1>
+                <p>
+                    The Flex Container is a tag that involves the flex items, to indicate <em>display: flex</em>, this tag passes to a Flex Container.
+                </p>
+            </section>
+
+            <!-- display -->
+            <section id="display" class="content">
+                <h2>1 display</h2>
+                <p>
+                    This defines a flex container; inline or block depending on the given value. It enables a flex context for all its direct children.
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="code-repeat" data-slug-hash="rNOoNaW" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="rNOoNaW">
+                    <span>See the Pen <a href="https://codepen.io/code-repeat/pen/rNOoNaW">
+                    rNOoNaW</a> by Code Repeat (<a href="https://codepen.io/code-repeat">@code-repeat</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </section>
+
+            <!-- flex-direction-->
+            <section id="flex-direction" class="content">
+                <h2>2 flex-direction</h2>
+                <p>
+                    The <em>flex-direction</em> property defines in which direction the container wants to stack the flex items.
+                    By default it is strong <strong>row</strong>, so when the <em>display: flex; </em> is added, the elements are in line, side by side.
+
+                </p>
+                <p>
+                    The change from <strong>row</strong> to <strong>column</strong> usually happens when we are defining styles in media queries for mobile. This ensures that the content is presented in a single column.
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="code-repeat" data-slug-hash="LYpMYgg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="LYpMYgg">
+                    <span>See the Pen <a href="https://codepen.io/code-repeat/pen/LYpMYgg">
+                    LYpMYgg</a> by Code Repeat (<a href="https://codepen.io/code-repeat">@code-repeat</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </section>
+
+            <!-- flex-wrap -->
+            <section id="flex-wrap" class="content">
+                <h2>3 flex-wrap</h2>
+                <p>
+                    Defines whether the items should break the line or not. By default they do not break lines, this causes the <strong>flex items</strong> to be compressed beyond the content limit.
+                </p>
+                <p>
+                    This is usually a property that is almost always defined as <em>flex-wrap: wrap;</em> So when one of the <strong> flex items</strong> reaches the content limit, the last item moves to the column underneath and so on.
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="code-repeat" data-slug-hash="GRpPaVd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="flex-wrap">
+                    <span>See the Pen <a href="https://codepen.io/code-repeat/pen/GRpPaVd">
+                    flex-wrap</a> by Code Repeat (<a href="https://codepen.io/code-repeat">@code-repeat</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </section>
+
+            <!-- flex-flow -->
+            <section id="flex-flow" class="content">
+                <h2>4 flex-flow</h2>
+                <p>
+                    Flex-flow is a shortcut to the <em>flex-direction</em> and <em>flex-wrap</em> properties. You will not see much of its use, because generally when we change the <em>flex-direction </em> <strong>column</strong>, we keep the <em>flex-wrap</em> pattern which is <strong>nowrap</strong>.
+                </p>
+
+                <p>
+                    E quando mudamos o <em>flex-wrap</em> para <strong>wrap</strong>, mantemos o padrão do <em>flex-direction </em>que é <strong>row</strong>.
+                </p>
+            </section>
+
+            <!-- justify-content -->
+            <section id="justify-content" class="content">
+                <h2>5 justify-content</h2>
+                <p>
+                    Align <strong>flex items</strong> in the container according to direction. The property only works if the current items do not occupy the entire container. This means that when defining <em>flex: 1;</em> or something similar in the items, the property will no longer have a function
+                </p>
+
+                <p>
+                    Excellent property to be used in cases where you want to align an item on the left and another on the right, as in a simple header with branding and navigation.
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="code-repeat" data-slug-hash="NWGodRm" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="justify-content">
+                    <span>See the Pen <a href="https://codepen.io/code-repeat/pen/NWGodRm">
+                    justify-content</a> by Code Repeat (<a href="https://codepen.io/code-repeat">@code-repeat</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </section>
+
+            <!-- align items -->
+            <section id="align-items" class="content">
+                <h2>6 align-items</h2>
+                <p>
+                    The <strong>align-items</strong> aligns the flex items according to the container axis. The alignment is different for when items are in <strong>columns</strong> or <strong>rows</strong>.
+                </p>
+                <p>
+                    This property allows the long-awaited central alignment on the vertical axis, something that was previously only possible with different hacks.
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="code-repeat" data-slug-hash="MWaLJEK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="MWaLJEK">
+                    <span>See the Pen <a href="https://codepen.io/code-repeat/pen/MWaLJEK">
+                    MWaLJEK</a> by Code Repeat (<a href="https://codepen.io/code-repeat">@code-repeat</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </section>
+
+            <!-- align-content -->
+            <section id="align-content" class="content">
+                <h2>7 align-content</h2>
+                <p>
+                    Aligns the container lines to the vertical axis. The property only works if there is more than one line of <strong>flex-items</strong>. For this, the <strong>flex-wrap</strong> needs to be wrap.
+                </p>
+
+                <p>
+                    Furthermore, its effect will only be seen if the container is larger than the sum of the lines of the items. This means that if you do not define height for the container, the property has no influence on the layout.
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="code-repeat" data-slug-hash="OJydWBY" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="OJydWBY">
+                    <span>See the Pen <a href="https://codepen.io/code-repeat/pen/OJydWBY">
+                    OJydWBY</a> by Code Repeat (<a href="https://codepen.io/code-repeat">@code-repeat</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </section>
+
+            <!--flex item -->
+            <section id="flex-item" class="content">
+                <h1>Flex Item</h1>
+                <p>
+                    Flex Items are the direct children of the Flex Container, remembering that a tag becomes a flex container from the moment you define <em>display: flex</em>.
+                    It is possible that a Flex Item is also a Flex Container, just define <em>display: flex</em> in it. So the children of that item will also be flex items.
+                </p>
+            </section>
+
+            <!-- flex-grow -->
+            <section id="flex-grow" class="content">
+                <h2>1 flex-grow</h2>
+                <p>
+                    Sets the ability of a flex item to grow. By default the value is zero, so the flex items occupy a maximum size related to their internal content or to the defined width.
+                </p>
+                <p>
+                    When setting 1 for all Flex Items, they will try to have the same width and will occupy 100% of the container. I mean try because if an element has a very wide content, it will respect the same.
+                </p>
+                <p>
+                    If you have a line with four items, where three are <em>flex-grow: 1</em> and a <em>flex-grow: 2</em>, <em>flex-grow: 2</em> will try to occupy 2 times more extra space than the other elements.
+                </p>
+                <p class="note">
+                    <strong>NOTE: justify-content does not work on items with defined flex-grow.</strong>
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="code-repeat" data-slug-hash="yLYZMyM" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="yLYZMyM">
+                    <span>See the Pen <a href="https://codepen.io/code-repeat/pen/yLYZMyM">
+                    yLYZMyM</a> by Code Repeat (<a href="https://codepen.io/code-repeat">@code-repeat</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </section>
+
+            <!-- flex-basis -->
+            <section id="flex-basis" class="content">
+                <h2>2 flex-basis</h2>
+                <p>
+                    Indicates the initial size of the flex item before distributing the remaining space.
+                </p>
+                <p>
+                    When we define <em>flex-grow: 1</em>; and we have auto on basis, the remaining amount to occupy the container is distributed around the content of the flex-item.
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="code-repeat" data-slug-hash="rNOPywd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="rNOPywd">
+                    <span>See the Pen <a href="https://codepen.io/code-repeat/pen/rNOPywd">
+                    rNOPywd</a> by Code Repeat (<a href="https://codepen.io/code-repeat">@code-repeat</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </section>
+
+            <!-- flex-shrink -->
+            <section id="flex-shrink" class="content">
+                <h2>3 flex-shrink</h2>
+                <p>
+                    Sets the item's size reduction capability.
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="code-repeat" data-slug-hash="qBOgrVg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="qBOgrVg">
+                    <span>See the Pen <a href="https://codepen.io/code-repeat/pen/qBOgrVg">
+                    qBOgrVg</a> by Code Repeat (<a href="https://codepen.io/code-repeat">@code-repeat</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </section>
+
+            <!-- flex -->
+            <section id="flex" class="content">
+                <h2>4 flex</h2>
+                <p>
+                    Shortcut to the <strong>flex-grow</strong>, <strong>flex-shrink</strong> and <strong>flex-basis</strong> properties. You will usually see the flex property in the flex items instead of each of the separate values.
+                </p>
+                <p>
+                    For better consistency between browsers, it is recommended to use the flex property instead of each separate property.
+                </p>
+                <p>
+                    In the example it is possible to see the same configurations as the flex-basis example, but now using only the flex property.
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="code-repeat" data-slug-hash="qBOwXdP" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="qBOwXdP">
+                    <span>See the Pen <a href="https://codepen.io/code-repeat/pen/qBOwXdP">
+                    qBOwXdP</a> by Code Repeat (<a href="https://codepen.io/code-repeat">@code-repeat</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </section>
+
+            <!-- order -->
+            <section id="order" class="content">
+                <h2>5 order</h2>
+                <p>
+                    Modifies the order of flex items. Always from lowest to highest, <em>order: 1</em> appears in front of <em>order: 5</em>.
+                </p>
+                <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="code-repeat" data-slug-hash="LYpvjZe" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="LYpvjZe">
+                    <span>See the Pen <a href="https://codepen.io/code-repeat/pen/LYpvjZe">
+                    LYpvjZe</a> by Code Repeat (<a href="https://codepen.io/code-repeat">@code-repeat</a>)
+                    on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </section>
+
+            <!-- align-self -->
+            <section id="align-self" class="content">
+                <h2>6 align-self</h2>
+                <p>
+                    Align-self is used to define the specific alignment of a single flex item within our container. If a value is assigned, it will go over what is assigned in the container's align-items.
+                </p>
+            </section>
+            <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="code-repeat" data-slug-hash="eYpoEvB" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="eYpoEvB">
+                <span>See the Pen <a href="https://codepen.io/code-repeat/pen/eYpoEvB">
+                eYpoEvB</a> by Code Repeat (<a href="https://codepen.io/code-repeat">@code-repeat</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+              </p>
+              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/083bf70c8b.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

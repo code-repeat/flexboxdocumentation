@@ -1,0 +1,16 @@
+.side-menu {
+    display: none;
+}
+
+
+.menu-icon {
+    display: block;
+}
+
+.main-content h1 {
+    font-size: 50px;
+}
+
+.main-content h2 {
+    font-size: 30px;
+}
